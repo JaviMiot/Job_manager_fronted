@@ -1,0 +1,52 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #147dd9;
+  color: white;
+  box-shadow: 0 4px 4px rgb(14, 104, 182, 0.3);
+}
+
+header img {
+  margin-right: 8px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #147dd9;
+  color: white;
+}
+
+footer .contactos {
+  list-style: none;
+}
+
+.contactos a {
+  color: white;
+  text-decoration: none;
+}
+
+.actions-containers {
+  display: flex;
+  justify-content: flex-end;
+  height: 35px;
+  padding: 8px 16px;
+}
+
+.actions-containers button {
+  background-color: #147dd9;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  padding: 4px 12px;
+  transform: all ease;
+  cursor: pointer;
+}
+
+.actions-containers button:hover {
+  background-color: #0e5696;
+}
