@@ -4,6 +4,8 @@ from django.db import models
 
 
 class ComunModel(models.Model):
+    """abstract class"""
+
     date_modified = models.DateTimeField(
         auto_now=True, help_text='date and time of the last modification')
     date_created = models.DateTimeField(
@@ -17,13 +19,17 @@ class ComunModel(models.Model):
 
 
 class Skill(ComunModel):
-    name = models.CharField(max_length=50, null=False)
+    """ Model Skill, use field ranking to get the most use skills"""
+
+    name = models.CharField(max_length=50, null=False, unique=False)
+    ranking = models.IntegerField(default=1)
 
     def __str__(self):
         return self.name
 
 
 class Job(ComunModel):
+    """Model Jobs"""
     title = models.CharField(max_length=100, null=False)
     description = models.TextField(max_length=1000, null=False)
     skill = models.ManyToManyField(Skill)
@@ -32,4 +38,3 @@ class Job(ComunModel):
         return '''title: {title} 
         description: {description}
         '''.format(title=self.title, description=self.description)
-
