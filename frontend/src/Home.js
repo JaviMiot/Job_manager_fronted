@@ -1,9 +1,9 @@
 import JobList from './components/JobsList';
 
-function App() {
+function App(props) {
   return (
     <>
-      <JobList />
+      <JobList {...props}/>
     </>
   );
 }

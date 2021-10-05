@@ -1,0 +1,123 @@
+.form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+  margin: 35px auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 35px 0;
+  height: auto;
+  border-radius: 15px;
+}
+
+form p {
+  font-weight: 500;
+}
+
+form .input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+label {
+  margin-bottom: 4px;
+}
+
+.center {
+  align-items: center;
+}
+
+.input-skills-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.input-skills-control button {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: #147dd9;
+  color: white;
+  font-size: 2rem;
+  line-height: 30px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.input-skills-control button:hover {
+  background-color: #0e5696;
+}
+
+input {
+  outline: none;
+  border: 2px solid rgb(20, 125, 217, 0.5);
+  height: 20px;
+  width: 290px;
+  border-radius: 5px;
+  padding: 2px 14px;
+  margin-bottom: 16px;
+}
+
+.input-skill__text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  width: 290px;
+  height: 80px;
+  padding: 8px 14px;
+  border-radius: 5px;
+  border: 2px solid rgb(20, 125, 217, 0.5);
+  margin-bottom: 35px;
+  font-family: roboto, arial, helvetica;
+}
+
+.btn-submit {
+  background-color: #147dd9;
+  color: white;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  padding: 4px 12px;
+  transform: all ease;
+  cursor: pointer;
+}
+
+.btn-submit :hover {
+  background-color: #0e5696;
+}
+
+.error-msg{
+    font-weight: bold;
+    color: red;
+    margin-bottom: 4px
+}
+
+.box-shadow{
+    background-color: rgb(242, 245, 248);
+    box-shadow: 4px 4px 16px rgb(224, 221, 221);
+}
+
+.skills_mostUse_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 250px;
+  padding: 16px 10px;
+  border-radius: 15px;
+}

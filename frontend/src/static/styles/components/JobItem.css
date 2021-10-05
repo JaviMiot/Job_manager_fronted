@@ -21,5 +21,10 @@
 .job-container a {
   font-size: 1.4rem;
   text-decoration: none;
-  color: #147dd9;
+  font-weight: 500;
+  color: #2e95f0;
+}
+
+.job-container a:hover {
+  color: #084981;
 }

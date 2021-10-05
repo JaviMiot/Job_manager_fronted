@@ -1,18 +1,25 @@
 import React from 'react';
-import '../static/styles/components/Layout.css'
-import logo from '../static/images/logo.png'
+import { Link } from 'react-router-dom';
+import '../static/styles/components/Layout.css';
+import logo from '../static/images/logo.png';
 
-const Layout = ({ children }) => {
+const styles = {
+  link: { textDecoration: 'none', color: 'white' },
+};
+
+const Layout = (props) => {
+  const { children } = props;
+
   return (
     <>
       <header>
         <img alt='logo' src={logo} />
-        <h1>Harness Job Manager</h1>
+        <Link style={styles.link} to='/'>
+          <h1>Harness Job Manager</h1>
+        </Link>
       </header>
-      <div className='actions-containers'>
-          <button className='btn-add'>Agregar Trabajo</button>
-      </div>
-      {children}
+
+      <div className='content'>{children}</div>
       <footer>
         <h3>Prueba Técnica</h3>
         <ul className='contactos'>

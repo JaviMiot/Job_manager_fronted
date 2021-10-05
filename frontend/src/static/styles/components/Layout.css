@@ -1,5 +1,6 @@
 header {
   display: flex;
+  height: 85px;
   justify-content: center;
   align-items: center;
   background-color: #147dd9;
@@ -11,8 +12,14 @@ header img {
   margin-right: 8px;
 }
 
+.content{
+  width: 100%;
+  padding: 0 0 78px;
+}
+
 footer {
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   background-color: #147dd9;
