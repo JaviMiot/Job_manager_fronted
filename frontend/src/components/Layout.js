@@ -15,7 +15,7 @@ const Layout = (props) => {
       <header>
         <img alt='logo' src={logo} />
         <Link style={styles.link} to='/'>
-          <h1>Harness Job Manager</h1>
+          <h1>Job Manager</h1>
         </Link>
       </header>
 

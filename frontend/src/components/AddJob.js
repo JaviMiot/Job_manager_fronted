@@ -3,6 +3,7 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import '../static/styles/components/AddJob.css';
 import config from '../utils/config';
 import useGetSkills from '../hooks/useGetSkills';
+import InputSkill from './InputSkill';
 
 const validate = (values) => {
   const errors = {};
@@ -25,14 +26,25 @@ const validate = (values) => {
 };
 
 const AddJob = (props) => {
-  const [skills, setSkill] = useState([{ name: '' }]);
   const urlSkills = `${config.url}skills/`;
   const urlJob = `${config.url}jobs/`;
   const mostUseSkills = useGetSkills(urlSkills);
-  const initialValues = { title: '', description: '', skill: skills };
+  const [enableRemove, setRemove] = useState(false);
+  const [initialValues, setInitialValues] = useState({
+    title: '',
+    description: '',
+    skill: [{ name: '' }],
+  });
 
   const handlerOnclick = () => {
-    setSkill([...skills, { name: '' }]);
+    setInitialValues({
+      ...initialValues,
+      skill: [...initialValues.skill, { name: '' }],
+    });
+
+    if (initialValues.skill.length > 0) {
+      setRemove(true);
+    }
   };
 
   const createJob = async (data) => {
@@ -45,6 +57,20 @@ const AddJob = (props) => {
     const dataResponse = await response.json();
 
     return dataResponse;
+  };
+
+  const handleRemoveSkill = () => {
+    setInitialValues({
+      ...initialValues,
+      skill:
+        initialValues.skill.length > 1
+          ? initialValues.skill.slice(0, initialValues.skill.length - 1)
+          : initialValues.skill,
+    });
+
+    if (initialValues.skill.length === 2) {
+      setRemove(false);
+    }
   };
 
   return (
@@ -72,8 +98,22 @@ const AddJob = (props) => {
             <div className='input-container center'>
               <div className='input-skills-control'>
                 <h4>Habilidades</h4>
-                <button type='button' onClick={handlerOnclick}>
+                <button
+                  className='btn btn-add'
+                  type='button'
+                  onClick={handlerOnclick}
+                >
                   +
+                </button>
+
+                <button
+                  className={`btn btn-remove ${
+                    !enableRemove ? 'hidden' : null
+                  } `}
+                  type='button'
+                  onClick={handleRemoveSkill}
+                >
+                  -
                 </button>
               </div>
               <div className='error-msg'>
@@ -81,13 +121,13 @@ const AddJob = (props) => {
               </div>
 
               <div className='input-skill__text-container'>
-                {skills.map((skill, index) => (
-                  <Field
+                {initialValues.skill.map((skill, index) => (
+                  <InputSkill
                     key={`skill${index + 1}`}
-                    type='text'
                     name={`skill[${index}].name`}
                     placeholder={`skill${index + 1}`}
-                    value={skill[index]}
+                    onClick={handleRemoveSkill}
+                    index={index}
                   />
                 ))}
               </div>

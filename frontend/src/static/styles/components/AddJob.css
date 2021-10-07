@@ -41,13 +41,12 @@ label {
   width: 100%;
 }
 
-.input-skills-control button {
+.btn {
   height: 30px;
   width: 30px;
   border-radius: 50%;
   outline: none;
   border: none;
-  background-color: #147dd9;
   color: white;
   font-size: 2rem;
   line-height: 30px;
@@ -55,7 +54,11 @@ label {
   margin-left: 8px;
 }
 
-.input-skills-control button:hover {
+.btn-add {
+  background-color: #147dd9;
+}
+
+.input-skills-control .btn-add:hover {
   background-color: #0e5696;
 }
 
@@ -100,15 +103,15 @@ textarea {
   background-color: #0e5696;
 }
 
-.error-msg{
-    font-weight: bold;
-    color: red;
-    margin-bottom: 4px
+.error-msg {
+  font-weight: bold;
+  color: red;
+  margin-bottom: 4px;
 }
 
-.box-shadow{
-    background-color: rgb(242, 245, 248);
-    box-shadow: 4px 4px 16px rgb(224, 221, 221);
+.box-shadow {
+  background-color: rgb(242, 245, 248);
+  box-shadow: 4px 4px 16px rgb(224, 221, 221);
 }
 
 .skills_mostUse_container {
@@ -120,4 +123,17 @@ textarea {
   height: 250px;
   padding: 16px 10px;
   border-radius: 15px;
+}
+
+.btn-remove {
+  background-color: rgb(219, 7, 7);
+  line-height: 1px;
+}
+
+.input-skills-control .btn-remove:hover {
+  background-color: rgb(187, 5, 5);
+}
+
+.hidden{
+  display: none;
 }
