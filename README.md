@@ -1,7 +1,9 @@
-# Job Manager App
-
 <div align="center">
-    <h1 style="text-align: center">Job Manager</h1>
+    <h1 style="text-align: center">Job Manager/ Frontend</h1>
+</div>
+
+<div align="center" >
+	<img width="500" src="https://i.imgur.com/TuAy327.png"/>
 </div>
 
 _About Project_
