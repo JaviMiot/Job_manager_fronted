@@ -1,82 +1,119 @@
-## Administrador de Trabajos
+# Job Manager App
 
-Autor: Javier Manobanda
+<div align="center">
+    <h1 style="text-align: center">Job Manager</h1>
+</div>
 
-###Instrucciones:
+_About Project_
+Web App to public jobs.
 
-##Backend
----
-Craer ambiente virtual para el backend
+## Installation🚀
 
-Installar librerias 
+_How copy the project._
+
+1. Clone the project
+
+```shell
+git clone
+```
+
+### Pre-requisites 📋
+
+_What I need installs?_
+
+1. Install dependencies to Django Backend
 
 ```shell
 python -m venv .env
-
 source .env/bin/activate --> linux
-
  .\.env\Scripts\activate --> windows
-
 pip install -r requirements.txt
 ```
 
-Correr backend ubicandose en la carpeta principal
+2. Install dependencies to React Frontend
 
 ```shell
-python backend/manage.py runserver
 python backend/manage.py createsuperuser
 ython backend/manage.py makemigrations
 python backend/manage.py migrate
 ```
 
-El backend de forma local esta corriendo en la dirección **http://127.0.0.1:8000/** se puede cambiar asignado la veriable de entorno **URL**
+### Usage 🔧
 
-##EndPoints
-- Listado de empleos (GET)
-http://127.0.0.1:8000/jobs/
-- Información detallada de un empleo (GET)
-http://127.0.0.1:8000/jobs/< id >
+_How use?_
 
-**Ejemplo:** http://127.0.0.1:8000/jobs/43
-```json
-{
-    "id": 43,
-    "skill": [
-        "python"
-    ],
-    "date_modified": "2021-10-05T16:35:45.470418Z",
-    "date_created": "2021-10-05T16:35:45.470474Z",
-    "is_active": true,
-    "title": "Tooling",
-    "description": "Con manejo de 3d"
-}
+_First step_ Run the backend
+
+```shell
+python backend/manage.py runserver
 ```
 
-- Crear un empleo (POST)
-http://127.0.0.1:8000/jobs/
-
-```json
-{
-    "title":"jr desarrollador quito ecuador",
-    "description": "trabajo medio tiempo en Cuenca",
-    "skill": [
-        {"name":"c#"},
-        {"name":"python"},
-        {"name":"python3"}
-    ]
-}
-```
-
-- obtener los skills más usados en los empleos publicados.
-http://127.0.0.1:8000/skills/
-
-
-##Frontend
----
-Moverse a la carpeta **frontend** y correr el proyecto de React.
+_Second step_ Move to the **frontend** folder and run frontend
 
 ```shell
 cd frontend
-npm run start
+npm run star
 ```
 
+_Some example about the solution in the project_
+
+The backend have for default the localhost **http://127.0.0.1:8000/** you can change using the environment variable **URL**
+
+##EndPoints
+
+- Get available jobs (GET)
+  http://127.0.0.1:8000/jobs/
+- Get information about job (GET)
+  http://127.0.0.1:8000/jobs/< id >
+
+**Example:** http://127.0.0.1:8000/jobs/43
+
+```json
+{
+  "id": 43,
+  "skill": ["python"],
+  "date_modified": "2021-10-05T16:35:45.470418Z",
+  "date_created": "2021-10-05T16:35:45.470474Z",
+  "is_active": true,
+  "title": "Tooling",
+  "description": "Con manejo de 3d"
+}
+```
+
+- Create a job (POST)
+  http://127.0.0.1:8000/jobs/
+
+```json
+{
+  "title": "jr desarrollador quito ecuador",
+  "description": "trabajo medio tiempo en Cuenca",
+  "skill": [{ "name": "c#" }, { "name": "python" }, { "name": "python3" }]
+}
+```
+
+- Get the most useful skills.
+  http://127.0.0.1:8000/skills/
+
+## Execute test ⚙️
+
+_Explica como ejecutar las pruebas automatizadas para este sistema_
+
+### Test end-to-end 🔩
+
+_Explica que verifican estas pruebas y por qué_
+
+```
+Da un ejemplo
+```
+
+## Autors ✒️
+
+- **Javier Manobanda** - [Github](https://github.com/JaviManobanda)
+
+## License 📄
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+---
+
+⌨️ with❤️ by [Javier Manobanda](https://github.com/JaviMiot)
