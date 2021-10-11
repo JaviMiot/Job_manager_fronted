@@ -16,41 +16,31 @@ _How copy the project._
 1. Clone the project
 
 ```shell
-git clone
+git clone https://github.com/JaviMiot/Job_manager_fronted.git
 ```
 
 ### Pre-requisites 📋
 
 _What I need installs?_
 
-1. Install dependencies to Django Backend
+1. Connect to [backend](https://github.com/JaviMiot/Job_manager_backend)
 
-```shell
-python -m venv .env
-source .env/bin/activate --> linux
- .\.env\Scripts\activate --> windows
-pip install -r requirements.txt
-```
 
 2. Install dependencies to React Frontend
 
 ```shell
-python backend/manage.py createsuperuser
-ython backend/manage.py makemigrations
-python backend/manage.py migrate
+npm install
+```
+3. Run app
+```shell
+npm run start
 ```
 
 ### Usage 🔧
 
 _How use?_
 
-_First step_ Run the backend
-
-```shell
-python backend/manage.py runserver
-```
-
-_Second step_ Move to the **frontend** folder and run frontend
+_First step_ Run the **frontend** folder and run frontend
 
 ```shell
 cd frontend
