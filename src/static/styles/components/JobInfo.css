@@ -1,0 +1,31 @@
+.card_job {
+  min-height: calc(100vh - 78px - 85px);
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin: 35px auto;
+}
+
+.card_detail {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.card_detail h1 {
+  color: #147dd9;
+  padding-bottom: 4px;
+  border-bottom: 2px solid rgb(20, 124, 215, 0.5);
+  text-align: center;
+}
+
+.skill-item {
+  background-color: #147dd9;
+  display: inline-block;
+  height: 25px;
+  padding: 4px 12px;
+  color: white;
+  font-weight: 500;
+  line-height: 25px;
+  border-radius: 10px;
+  margin-left: 4px;
+}

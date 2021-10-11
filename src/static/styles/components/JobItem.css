@@ -1,0 +1,30 @@
+.job-container {
+  width: 400px;
+  height: 200px;
+  background-color: #f2f2f2;
+  box-shadow: 3px 4px 4px rgb(216, 216, 216);
+  border-radius: 8px;
+  padding: 16px 10px;
+  transition: all ease;
+  margin: 10px;
+}
+
+.job-container:hover {
+  transform: scale(1.03);
+}
+
+.job-description {
+  height: 90px;
+  overflow: hidden;
+}
+
+.job-container a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: #2e95f0;
+}
+
+.job-container a:hover {
+  color: #084981;
+}
